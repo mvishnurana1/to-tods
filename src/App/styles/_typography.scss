@@ -1,0 +1,9 @@
+@use "@angular/material" as mat;
+
+@mixin heading-style($level) {
+  font-size: mat.get-theme-typography($theme-typography, $level, font-size);
+  font-family: mat.get-theme-typography($theme-typography, $level, font-family);
+  line-height: mat.get-theme-typography($theme-typography, $level, line-height);
+  font-weight: mat.get-theme-typography($theme-typography, $level, font-weight);
+  text-transform: uppercase;
+}
