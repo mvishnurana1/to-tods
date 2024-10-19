@@ -1,0 +1,14 @@
+// _toolbar-theme.scss
+
+@use "@angular/material" as mat;
+@use "../styles/m3-theme.scss" as theme;
+
+@mixin toolbar-theme($theme) {
+  $primary-color: #{mat.get-theme-color(theme.$light-theme, primary, 40)};
+  $text-color: #{mat.get-theme-color(theme.$light-theme, neutral-variant, 99)};
+
+  mat-toolbar {
+    background-color: $primary-color;
+    color: $text-color;
+  }
+}
