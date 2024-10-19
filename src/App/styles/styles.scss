@@ -1,0 +1,53 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use "@angular/material" as mat;
+@use "m3-theme.scss" as theme;
+// Plus imports for o ther components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+
+@font-face {
+  font-family: "uniform-condensed";
+  src: url("./../src/assets/fonts/UniformCondensed-Bold.woff") format("woff2");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+}
+
+:root {
+  @include mat.all-component-themes(theme.$light-theme);
+
+  mat-toolbar {
+    background-color: #{mat.get-theme-color(theme.$light-theme, primary, 40)};
+    color: #{mat.get-theme-color(theme.$light-theme, neutral-variant, 99)};
+  }
+
+  mat-icon {
+    color: #{mat.get-theme-color(theme.$light-theme, neutral-variant, 99)};
+  }
+
+  mat-sidenav {
+    background-color: #{mat.get-theme-color(theme.$light-theme, neutral, 95)};
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+@include mat.typography-hierarchy(theme.$light-theme);
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: "uniform-condensed", Roboto, "Helvetica Neue", sans-serif;
+}
