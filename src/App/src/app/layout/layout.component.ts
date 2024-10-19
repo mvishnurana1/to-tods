@@ -9,7 +9,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 import { RouterOutlet } from '@angular/router';
-import { TodoService } from '../api/todo.service';
+import { TodoService } from '../services/todo.service';
 
 @Component({
   selector: 'app-layout',

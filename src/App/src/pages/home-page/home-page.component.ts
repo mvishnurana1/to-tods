@@ -1,7 +1,7 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { AsyncPipe, CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
-import { TodoService } from '../../app/api/todo.service';
+import { TodoService } from '../../app/services/todo.service';
 
 @Component({
   selector: 'app-home-page',
