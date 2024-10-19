@@ -39,6 +39,10 @@
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   }
+
+  --primary-color: #{mat.get-theme-color(theme.$light-theme, primary, 40)};
+  --accent-color: #{mat.get-theme-color(theme.$light-theme, secondary, 40)};
+  --warn-color: #{mat.get-theme-color(theme.$light-theme, error, 40)};
 }
 
 @include mat.typography-hierarchy(theme.$light-theme);
@@ -50,4 +54,13 @@ body {
 body {
   margin: 0;
   font-family: "uniform-condensed", Roboto, "Helvetica Neue", sans-serif;
+
+  .page {
+    background-color: #{mat.get-theme-color(
+        theme.$light-theme,
+        neutral-variant,
+        90
+      )};
+    padding: 1rem;
+  }
 }

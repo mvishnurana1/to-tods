@@ -1,5 +1,63 @@
-<p>home-page works!</p>
-<div *ngIf="todos$ | async as todos">
-    <p>Name: {{ todos }}</p>
-    <!-- Add more properties as needed -->
-  </div>
+<section class="page">
+  <mat-card appearance="outlined" class="card">
+    <mat-card-header>
+      <mat-card-title>
+        <h1>Australian Shepherd</h1>
+      </mat-card-title>
+      <mat-card-subtitle>
+        <h3>Herding group</h3>
+      </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>
+        The Shiba Inu is the smallest of the six original and distinct spitz
+        breeds of dog from Japan. A small, agile dog that copes very well with
+        mountainous terrain, the Shiba Inu was originally bred for hunting.
+      </p>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card appearance="outlined" class="card">
+    <mat-card-header>
+      <mat-card-title>Weather Information</mat-card-title>
+      <mat-card-subtitle>Details</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <div *ngIf="todos$ | async as todos">
+        <p>Name: {{ todos }}</p>
+      </div>
+
+      <div>
+        @if (weather$ | async; as weatherDetails) {
+        <div *ngFor="let weatherItem of weatherDetails">
+          <div>Date: {{ weatherItem.date }}</div>
+          <div>Temperature (C): {{ weatherItem.temperatureC }}</div>
+          <div>Summary: {{ weatherItem.summary }}</div>
+        </div>
+        }
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card appearance="outlined" class="card">
+    <mat-card-header>
+      <mat-card-title>Weather Information</mat-card-title>
+      <mat-card-subtitle>Details</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <div *ngIf="todos$ | async as todos">
+        <p>Name: {{ todos }}</p>
+      </div>
+
+      <div>
+        @if (weather$ | async; as weatherDetails) {
+        <div *ngFor="let weatherItem of weatherDetails">
+          <div>Date: {{ weatherItem.date }}</div>
+          <div>Temperature (C): {{ weatherItem.temperatureC }}</div>
+          <div>Summary: {{ weatherItem.summary }}</div>
+        </div>
+        }
+      </div>
+    </mat-card-content>
+  </mat-card>
+</section>

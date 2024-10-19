@@ -6,15 +6,31 @@
 }
 
 .sidenav {
-  width: 200px;
+  width: 160px;
 }
 
 .sidenav .mat-toolbar {
-  background-color: #{mat.get-theme-color(theme.$light-theme, primary, 40)};
+  background-color: var(--primary-color);
+}
+
+mat-sidenav-content,
+mat-sidenav-container {
+  height: 100vh;
 }
 
 .mat-toolbar.mat-primary {
   position: sticky;
   top: 0;
   z-index: 1;
+}
+
+.nav-item {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  color: var(--primary-color);
+
+  .icon {
+    color: var(--primary-color);
+  }
 }
