@@ -95,26 +95,7 @@ body {
     p,
     span,
     div {
-      // font-size: mat.get-theme-typography(
-      //   $theme-typography,
-      //   body-1,
-      //   font-size
-      // );
-      // font-family: mat.get-theme-typography(
-      //   $theme-typography,
-      //   body-1,
-      //   font-family
-      // );
-      // line-height: mat.get-theme-typography(
-      //   $theme-typography,
-      //   body-1,
-      //   line-height
-      // );
-      // font-weight: mat.get-theme-typography(
-      //   $theme-typography,
-      //   body-1,
-      //   font-weight
-      // );
+      @include typography.body-style('body-1');
     }
   }
 }
