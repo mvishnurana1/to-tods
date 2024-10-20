@@ -1,0 +1,82 @@
+@use "@angular/material" as mat;
+
+$display: mat.m2-define-typography-level(
+  $font-size: 36px,
+  $line-height: 1.25,
+  $font-weight: 700,
+);
+
+$heading-1: mat.m2-define-typography-level(
+  $font-size: 32px,
+  $line-height: 1.25,
+  $font-weight: 700,
+);
+
+$heading-2: mat.m2-define-typography-level(
+  $font-size: 28px,
+  $line-height: 1.25,
+  $font-weight: 700,
+);
+
+$heading-3: mat.m2-define-typography-level(
+  $font-size: 26px,
+  $line-height: 1.25,
+  $font-weight: 700,
+);
+
+$heading-4: mat.m2-define-typography-level(
+  $font-size: 22px,
+  $line-height: 1.25,
+  $font-weight: 700,
+);
+
+$heading-5: mat.m2-define-typography-level(
+  $font-size: 20px,
+  $line-height: 1.25,
+  $font-weight: 700,
+);
+
+$heading-6: mat.m2-define-typography-level(
+  $font-size: 18px,
+  $line-height: 1.25,
+  $font-weight: 700,
+);
+
+$body: mat.m2-define-typography-level(
+  $font-size: 16px,
+  $line-height: 1.5,
+  $font-weight: 400,
+);
+
+$body-small: mat.m2-define-typography-level(
+  $font-size: 14px,
+  $line-height: 1.5,
+  $font-weight: 400,
+);
+
+$body-extra-small: mat.m2-define-typography-level(
+  $font-size: 12px,
+  $line-height: 1.5,
+  $font-weight: 400,
+);
+
+$theme-typography: mat.m2-define-typography-config(
+  $font-family: "uniform-condensed",
+  $headline-1: $heading-1,
+  $headline-2: $heading-2,
+  $headline-3: $heading-3,
+  $headline-4: $heading-4,
+  $headline-5: $heading-5,
+  $headline-6: $heading-6,
+  $body-1: $body,
+  $body-2: $body-small,
+  $caption: $body-extra-small,
+);
+
+@mixin heading-style($level) {
+  font-size: mat.get-theme-typography($theme-typography, $level, font-size);
+  font-family: mat.get-theme-typography($theme-typography, $level, font-family);
+  line-height: mat.get-theme-typography($theme-typography, $level, line-height);
+  font-weight: mat.get-theme-typography($theme-typography, $level, font-weight);
+  text-transform: uppercase;
+}
