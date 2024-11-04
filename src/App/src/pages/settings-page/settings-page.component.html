@@ -17,23 +17,5 @@
         </p>
       </mat-card-content>
     </mat-card>
-
-    @if (weather$ | async; as weatherDetails) {
-    <div *ngFor="let weatherItem of weatherDetails">
-      <mat-card appearance="outlined" class="card">
-        <mat-card-header>
-          <mat-card-title><h3>Weather Info</h3></mat-card-title>
-        </mat-card-header>
-        <mat-card-content>
-          <div>Date: {{ weatherItem.date }}</div>
-          <div>Temperature (C): {{ weatherItem.temperatureC }}</div>
-          <div>Summary: {{ weatherItem.summary }}</div>
-          <mat-card-actions [align]="'end'">
-            <button mat-flat-button>Click me</button>
-          </mat-card-actions>
-        </mat-card-content>
-      </mat-card>
-    </div>
-    }
   </div>
 </section>
