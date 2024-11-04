@@ -28,19 +28,10 @@
   @include mat.all-component-themes(theme.$light-theme);
   @include toolbar-theme.toolbar-theme(theme.$light-theme);
 
-  mat-icon {
-    color: #{mat.get-theme-color(theme.$light-theme, neutral-variant, 99)};
-  }
-
-  mat-sidenav {
-    background-color: #{mat.get-theme-color(theme.$light-theme, neutral, 95)};
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-  }
-
   --primary-color: #{mat.get-theme-color(theme.$light-theme, primary, 40)};
   --accent-color: #{mat.get-theme-color(theme.$light-theme, secondary, 40)};
   --warn-color: #{mat.get-theme-color(theme.$light-theme, error, 40)};
+  --white: #{mat.get-theme-color(theme.$light-theme, neutral-variant, 99)};
 }
 
 @include mat.typography-hierarchy(theme.$light-theme);
@@ -63,38 +54,38 @@ body {
 
     h1,
     .h1 {
-      @include typography.heading-style('headline-1');
+      @include typography.heading-style("headline-1");
     }
 
     h2,
     .h2 {
-      @include typography.heading-style('headline-2');
+      @include typography.heading-style("headline-2");
     }
 
     h3,
     .h3 {
-      @include typography.heading-style('headline-3');
+      @include typography.heading-style("headline-3");
     }
 
     h4,
     .h4 {
-      @include typography.heading-style('headline-4');
+      @include typography.heading-style("headline-4");
     }
 
     h5,
     .h5 {
-      @include typography.heading-style('headline-5');
+      @include typography.heading-style("headline-5");
     }
 
     h6,
     .h6 {
-      @include typography.heading-style('headline-6');
+      @include typography.heading-style("headline-6");
     }
 
     p,
     span,
     div {
-      @include typography.body-style('body-1');
+      @include typography.body-style("body-1");
     }
   }
 }

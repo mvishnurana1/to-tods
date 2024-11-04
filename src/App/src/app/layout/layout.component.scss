@@ -13,9 +13,19 @@
   background-color: var(--primary-color);
 }
 
+mat-sidenav {
+  background-color: #{mat.get-theme-color(theme.$light-theme, neutral, 95)};
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
 mat-sidenav-content,
 mat-sidenav-container {
   height: 100vh;
+}
+
+mat-icon {
+  color: var(--white);
 }
 
 .mat-toolbar.mat-primary {
